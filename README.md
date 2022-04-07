@@ -13,3 +13,5 @@
     10.1 Card has cardHeader
     10.1 Card has cardBody
     10.1 Card has cardFooter
+
+11. Create Grid component to display cards in a grid or flex
