@@ -6,9 +6,7 @@ import App from './App';
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App tab='home' />
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <App tab='home' />
+  </BrowserRouter>
 );
