@@ -1,9 +1,13 @@
+import { Route } from 'react-router-dom';
 import './App.css';
+import PetsPage from './pages/PetsPage/PetsPage';
 
 function App() {
   return (
     <div className='App'>
-      <h1>App</h1>
+      <Route path={'/'}>
+        <PetsPage />
+      </Route>
     </div>
   );
 }
