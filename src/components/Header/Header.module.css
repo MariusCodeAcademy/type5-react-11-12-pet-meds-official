@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.navLink {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+.navLink:hover {
+  background-color: rgb(204, 204, 204);
+}

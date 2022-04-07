@@ -1,14 +1,19 @@
 import { NavLink } from 'react-router-dom';
+import css from './Header.module.css';
 
 function Header() {
   return (
-    <div>
-      <h2>🐶 PETS</h2>
+    <header className={css.header}>
+      <h2 className={css.logo}>🐶 PETS</h2>
       <nav>
-        <NavLink to='/'>Pets</NavLink>
-        <NavLink to='/medication'>Medication</NavLink>
+        <NavLink className={css.navLink} to='/'>
+          Pets
+        </NavLink>
+        <NavLink className={css.navLink} to='/medication'>
+          Medication
+        </NavLink>
       </nav>
-    </div>
+    </header>
   );
 }
 // sukurti header
