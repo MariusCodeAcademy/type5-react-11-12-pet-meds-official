@@ -8,3 +8,8 @@ body {
 h1, h2, h3, h4, p {
   margin-top: 0;
 }
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
