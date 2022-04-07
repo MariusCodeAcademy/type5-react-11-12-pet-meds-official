@@ -10,3 +10,6 @@
 8. Create PageHeader conponent for this [PageHeader](https://prnt.sc/EXoVbaTxIUHl)
 9. Create Button component. If it gets 'outline' prop it is of different style
 10. Create Card component
+    10.1 Card has cardHeader
+    10.1 Card has cardBody
+    10.1 Card has cardFooter
