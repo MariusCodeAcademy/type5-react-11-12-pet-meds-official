@@ -4,6 +4,7 @@ import Button from './../../components/UI/Button/Button';
 import CardList from '../../components/CardList/CardList';
 import { useEffect, useState } from 'react';
 import { getFetch } from '../../helper/helper';
+import { Link } from 'react-router-dom';
 
 function PetsPage() {
   const [petsArr, setPetsArr] = useState([]);
@@ -22,7 +23,9 @@ function PetsPage() {
     <Container>
       <div className={css.flex}>
         <h1>Title</h1>
-        <Button>add pet</Button>
+        <Link to={'/add-pet'}>
+          <Button>add pet</Button>
+        </Link>
       </div>
       <CardList items={petsArr} />
     </Container>
