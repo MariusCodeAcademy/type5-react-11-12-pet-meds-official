@@ -1,12 +1,13 @@
 import Card from '../Card/Card';
+import Grid from './../UI/Grid/Grid';
 
-function CardList() {
+function CardList(props) {
   return (
-    <div>
-      <Card />
-      <Card />
-      <Card />
-    </div>
+    <Grid>
+      {props.items.map((pObj) => (
+        <Card key={pObj.id} {...pObj} />
+      ))}
+    </Grid>
   );
 }
 

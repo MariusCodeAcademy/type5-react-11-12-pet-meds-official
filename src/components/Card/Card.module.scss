@@ -1,0 +1,15 @@
+.card {
+  border: 1px solid rgb(189, 189, 189);
+  padding: 20px;
+  text-align: center;
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .body p:first-child {
+    margin-bottom: 0;
+  }
+}
+

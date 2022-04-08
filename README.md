@@ -15,3 +15,9 @@
     10.1 Card has cardFooter
 
 11. Create Grid component to display cards in a grid or flex
+
+## SCSS
+
+1. npm install sass
+2. rename css to scss
+3. enjoy
