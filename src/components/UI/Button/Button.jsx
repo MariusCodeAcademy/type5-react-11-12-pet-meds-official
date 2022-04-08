@@ -1,5 +1,8 @@
 import css from './Button.module.css';
 
+// <Button outline> remove pet</Button>
+// <Button> remove pet</Button>
+
 function Button(props) {
   // jei turim props.outline
   // pridekim klase outline
