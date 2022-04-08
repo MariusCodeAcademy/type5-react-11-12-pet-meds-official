@@ -3,7 +3,7 @@ import css from './PetsPage.module.css';
 import Button from './../../components/UI/Button/Button';
 import CardList from '../../components/CardList/CardList';
 import { useEffect, useState } from 'react';
-import { getFetch } from '../../helper/helper';
+import { getFetch, getFetchLocal } from '../../helper/helper';
 import { Link } from 'react-router-dom';
 
 function PetsPage() {
@@ -14,8 +14,9 @@ function PetsPage() {
   }, []);
 
   async function getPets() {
-    const petsFromDb = await getFetch('pets');
-    console.log('petsFromDb ===', petsFromDb);
+    const petsFromDb = await getFetchLocal('pets');
+    // console.log('petsFromDb ===', petsFromDb);
+    console.log(JSON.stringify(petsFromDb));
     setPetsArr(petsFromDb);
   }
 

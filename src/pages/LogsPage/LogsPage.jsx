@@ -5,7 +5,7 @@ function LogsPage() {
   // prisideti state,
   // prisideti useEfecta
   // prisideti getLogs()
-  // getLogs() kviesti getFetch() ir gauti logs
+  // getLogs() kviesti getFetchLocal() ir gauti logs 'logs51.json'
   // gavus atnaujinti state
   return (
     <div>
