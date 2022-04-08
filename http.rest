@@ -1,0 +1,20 @@
+GET https://glittery-dull-snickerdoodle.glitch.me/v1/pets
+###
+POST https://glittery-dull-snickerdoodle.glitch.me/v1/pets
+
+Content-Type: application/json
+
+{
+  "name": "SpecialNetrinti",
+  "dob": "2019-09-01",
+  "client_email": "james@bond.com"
+}
+### 
+POST https://glittery-dull-snickerdoodle.glitch.me/v1/logs
+Content-Type: application/json
+
+{
+  "pet_id": 51,
+  "description": "Viskas ok ",
+  "status": "sveikas"
+}

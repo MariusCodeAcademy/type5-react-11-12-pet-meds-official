@@ -27,7 +27,7 @@ function PetsPage() {
           <Button>add pet</Button>
         </Link>
       </div>
-      <CardList items={petsArr} />
+      <CardList onDelete={getPets} items={petsArr} />
     </Container>
   );
 }

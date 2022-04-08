@@ -5,6 +5,7 @@ import AddPet from './pages/AddPet/AddPet';
 import MedsPage from './pages/MedsPage/MedsPage';
 import NotFound from './pages/NotFound';
 import PetsPage from './pages/PetsPage/PetsPage';
+import LogsPage from './pages/LogsPage/LogsPage';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         </Route>
         <Route path='/add-pet'>
           <AddPet />
+        </Route>
+        <Route path='/logs/:suniukoId'>
+          <LogsPage />
         </Route>
         <Route path='/medication'>
           <MedsPage />
