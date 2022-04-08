@@ -18,19 +18,21 @@ function Card(props) {
   }
   return (
     <div className={css.card}>
-      <h3>{props.name}</h3>
+      <h3>{props.title}</h3>
       <div className={css.body}>
         <p>{dateFormated}</p>
-        <p>{props.client_email}</p>
+        <p>{props.body}</p>
       </div>
-      <div className={css.footer}>
-        <Link to={`/logs/${props.id}`}>
-          <Button>View logs</Button>
-        </Link>
-        <Button onClick={handleDelete} outline>
-          Delete
-        </Button>
-      </div>
+      {!props.cardType && (
+        <div className={css.footer}>
+          <Link to={`/logs/${props.id}`}>
+            <Button>View logs</Button>
+          </Link>
+          <Button onClick={handleDelete} outline>
+            Delete
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

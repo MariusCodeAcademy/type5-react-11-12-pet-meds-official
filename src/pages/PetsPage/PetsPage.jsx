@@ -14,7 +14,7 @@ function PetsPage() {
   }, []);
 
   async function getPets() {
-    const petsFromDb = await getFetchLocal('pets');
+    const petsFromDb = await getFetch('pets');
     // console.log('petsFromDb ===', petsFromDb);
     console.log(JSON.stringify(petsFromDb));
     setPetsArr(petsFromDb);

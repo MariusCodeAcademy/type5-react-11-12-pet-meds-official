@@ -5,7 +5,14 @@ function CardList(props) {
   return (
     <Grid>
       {props.items.map((pObj) => (
-        <Card onDelete={props.onDelete} key={pObj.id} {...pObj} />
+        <Card
+          cardType={props.cardType}
+          onDelete={props.onDelete}
+          key={pObj.id}
+          title={props.cardType === 'log' ? pObj.status : pObj.name}
+          body={props.cardType === 'log' ? pObj.description : pObj.client_email}
+          {...pObj}
+        />
       ))}
     </Grid>
   );
