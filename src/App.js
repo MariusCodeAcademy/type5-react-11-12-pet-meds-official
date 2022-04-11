@@ -6,6 +6,7 @@ import MedsPage from './pages/MedsPage/MedsPage';
 import NotFound from './pages/NotFound';
 import PetsPage from './pages/PetsPage/PetsPage';
 import LogsPage from './pages/LogsPage/LogsPage';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -23,6 +24,12 @@ function App() {
         </Route>
         <Route path='/medication'>
           <MedsPage />
+        </Route>
+        <Route path='/login'>
+          <Login />
+        </Route>
+        <Route path='/register'>
+          <Login />
         </Route>
         <Route path={'*'}>
           <NotFound />

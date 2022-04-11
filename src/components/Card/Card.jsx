@@ -31,6 +31,7 @@ function Card(props) {
           <Button onClick={handleDelete} outline>
             Delete
           </Button>
+          <Button outline>Logout</Button>
         </div>
       )}
     </div>

@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import Container from '../UI/Container';
 import css from './Header.module.css';
+import Button from './../UI/Button/Button';
 
 function Header() {
   return (
@@ -14,6 +15,13 @@ function Header() {
           <NavLink className={css.navLink} to='/medication'>
             Medication
           </NavLink>
+          <NavLink className={css.navLink} to='/login'>
+            Login
+          </NavLink>
+          <NavLink className={css.navLink} to='/register'>
+            Register
+          </NavLink>
+          <Button>Logout</Button>
         </nav>
       </Container>
     </header>
