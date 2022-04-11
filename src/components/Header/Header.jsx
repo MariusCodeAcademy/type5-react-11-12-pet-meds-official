@@ -30,7 +30,9 @@ function Header() {
               Register
             </NavLink>
           )}
-          {authCtxValue.isLoggedIn && <Button>Logout</Button>}
+          {authCtxValue.isLoggedIn && (
+            <Button onClick={authCtxValue.logout}>Logout</Button>
+          )}
         </nav>
       </Container>
     </header>

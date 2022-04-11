@@ -16,7 +16,8 @@ function App() {
   function logout() {
     setIsLoggedIn(false);
   }
-  function login() {
+  function login(usrName, psw) {
+    console.log('username, pass', usrName, psw);
     setIsLoggedIn(true);
   }
   // paduoti login i context value
@@ -25,6 +26,7 @@ function App() {
   const currentContextValue = {
     isLoggedIn,
     logout,
+    login,
   };
 
   return (
