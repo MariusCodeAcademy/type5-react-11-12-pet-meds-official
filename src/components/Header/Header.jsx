@@ -2,8 +2,13 @@ import { NavLink } from 'react-router-dom';
 import Container from '../UI/Container';
 import css from './Header.module.css';
 import Button from './../UI/Button/Button';
+import { useContext } from 'react';
+import AuthContext from '../../store/authContext';
 
-function Header(props) {
+function Header() {
+  const authCtxValue = useContext(AuthContext);
+  console.log('authCtxValue ===', authCtxValue);
+
   return (
     <header>
       <Container className={css.header}>
@@ -15,17 +20,17 @@ function Header(props) {
           <NavLink className={css.navLink} to='/medication'>
             Medication
           </NavLink>
-          {!props.isLoggedIn && (
+          {!authCtxValue.isLoggedIn && (
             <NavLink className={css.navLink} to='/login'>
               Login
             </NavLink>
           )}
-          {!props.isLoggedIn && (
+          {!authCtxValue.isLoggedIn && (
             <NavLink className={css.navLink} to='/register'>
               Register
             </NavLink>
           )}
-          {props.isLoggedIn && <Button>Logout</Button>}
+          {authCtxValue.isLoggedIn && <Button>Logout</Button>}
         </nav>
       </Container>
     </header>

@@ -2,8 +2,11 @@ import { deleteFetch } from '../../helper/helper';
 import Button from '../UI/Button/Button';
 import css from './Card.module.scss';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import AuthContext from './../../store/authContext';
 
 function Card(props) {
+  const authCtxValue = useContext(AuthContext);
   const dateFormated = new Date(props.dob).toLocaleString('lt', { dateStyle: 'long' });
 
   async function handleDelete() {
@@ -31,7 +34,9 @@ function Card(props) {
           <Button onClick={handleDelete} outline>
             Delete
           </Button>
-          <Button outline>Logout</Button>
+          <Button onClick={authCtxValue.logout} outline>
+            Logout
+          </Button>
         </div>
       )}
     </div>
