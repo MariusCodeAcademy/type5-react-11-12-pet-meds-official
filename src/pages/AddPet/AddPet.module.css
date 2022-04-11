@@ -20,3 +20,8 @@
   border: 1px solid tomato;
   padding: 5px 10px
 }
+
+.errBg {
+  background-color: rgb(255, 193, 182);
+  border-color: tomato;
+}
