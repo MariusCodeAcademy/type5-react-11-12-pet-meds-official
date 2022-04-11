@@ -7,11 +7,14 @@ import NotFound from './pages/NotFound';
 import PetsPage from './pages/PetsPage/PetsPage';
 import LogsPage from './pages/LogsPage/LogsPage';
 import Login from './pages/Login';
+import { useState } from 'react';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <div className='App'>
-      <Header />
+      <Header isLoggedIn={isLoggedIn} />
       <Switch>
         <Route path='/' exact>
           <PetsPage />

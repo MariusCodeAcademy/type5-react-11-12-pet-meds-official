@@ -3,7 +3,7 @@ import Container from '../UI/Container';
 import css from './Header.module.css';
 import Button from './../UI/Button/Button';
 
-function Header() {
+function Header(props) {
   return (
     <header>
       <Container className={css.header}>
@@ -15,13 +15,17 @@ function Header() {
           <NavLink className={css.navLink} to='/medication'>
             Medication
           </NavLink>
-          <NavLink className={css.navLink} to='/login'>
-            Login
-          </NavLink>
-          <NavLink className={css.navLink} to='/register'>
-            Register
-          </NavLink>
-          <Button>Logout</Button>
+          {!props.isLoggedIn && (
+            <NavLink className={css.navLink} to='/login'>
+              Login
+            </NavLink>
+          )}
+          {!props.isLoggedIn && (
+            <NavLink className={css.navLink} to='/register'>
+              Register
+            </NavLink>
+          )}
+          {props.isLoggedIn && <Button>Logout</Button>}
         </nav>
       </Container>
     </header>
