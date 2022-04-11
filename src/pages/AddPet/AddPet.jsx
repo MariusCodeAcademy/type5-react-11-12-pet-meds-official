@@ -8,13 +8,36 @@ function AddPet() {
   const [dob, setDob] = useState('2002-02-11');
   const [userEmail, setUserEmail] = useState('james@bond.com');
 
+  function submitHandler() {
+    // uzdeti formai
+    // sustabdyti nuo perkrovimo
+  }
+
   return (
     <Container>
       <h1>Add new pet</h1>
       <form className={css.form}>
-        <input className={css.input} type='text' placeholder='Pet name' />
-        <input className={css.input} type='date' placeholder='Pet DOB' />
-        <input className={css.input} type='text' placeholder='Your email' />
+        <input
+          onChange={(e) => setName(e.target.value)}
+          value={name}
+          className={css.input}
+          type='text'
+          placeholder='Pet name'
+        />
+        <input
+          onChange={(e) => setDob(e.target.value)}
+          value={dob}
+          className={css.input}
+          type='date'
+          placeholder='Pet DOB'
+        />
+        <input
+          onChange={(e) => setUserEmail(e.target.value)}
+          value={userEmail}
+          className={css.input}
+          type='text'
+          placeholder='Your email'
+        />
         <Button>Create</Button>
       </form>
     </Container>
